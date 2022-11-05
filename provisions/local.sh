@@ -18,9 +18,10 @@ fd-find \
 # tmux tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# batcat -> bat
+# symlinks
 sudo mkdir -p ~/.local/bin
 sudo ln -s /usr/bin/batcat ~/.local/bin/bat
+sudo ln -s /usr/bin/fdfind ~/.local/bin/fd
 
 # diff-so-fancy
 sudo add-apt-repository ppa:aos1/diff-so-fancy
