@@ -65,7 +65,7 @@ Vagrant.configure('2') do |config|
   config.vm.provision 'shell', path: 'provisions/nvm.sh', name: 'nvm.sh', privileged: false
   config.vm.provision 'shell', path: 'provisions/docker.sh', name: 'docker.sh'
   config.vm.provision 'shell', path: 'provisions/dotfiles.sh', name: 'dotfiles.sh', privileged: false
-  config.vm.provision 'shell', path: 'provisions/chrome.sh', name: 'chrome.sh'
+  config.vm.provision 'shell', path: 'provisions/browser.sh', name: 'browser.sh'
   config.vm.provision 'shell', path: 'provisions/rust.sh', name: 'rust.sh', privileged: false
   config.vm.provision 'shell', path: 'provisions/neovim.sh', name: 'neovim.sh', privileged: false
 end
