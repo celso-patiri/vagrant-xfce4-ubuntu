@@ -50,8 +50,8 @@ Vagrant.configure('2') do |config|
   config.vm.provision 'file', source: "#{ENV['HOME']}/.ssh/id_rsa", destination: '~/.ssh/id_rsa'
 
   # Fonts
-  config.vm.provision 'shell', inline: 'chmod 777 /usr/share'
-  config.vm.provision 'file', source: 'share/fonts', destination: '/usr/share/fonts'
+  config.vm.provision 'shell', inline: 'mkdir /usr/local/share/fonts && chmod 777 /usr/local/share/fonts'
+  config.vm.provision 'file', source: 'share/fonts', destination: '/usr/local/share/fonts'
 
   # Run shell script provisions
   config.vm.provision 'shell', path: 'provisions/base.sh', name: 'base.sh'
